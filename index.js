@@ -17,289 +17,9 @@ var charrotation = 0;
 var playertype = "Cube";
 var isatmenu = true;
 var bgmusic;
-var objects = [{
-	Type: "Cube",
-	X: 400,
-	Y: 300
-},{
-	Type: "Cube",
-	X: 425,
-	Y: 300
-},{
-	Type: "Cube",
-	X: 450,
-	Y: 300
-},{
-	Type: "Cube",
-	X: 475,
-	Y: 300
-},{
-	Type: "Spike",
-	X: 500,
-	Y: 275
-},{
-	Type: "Cube",
-	X: 500,
-	Y: 300
-},{
-	Type: "Cube",
-	X: 525,
-	Y: 300
-},{
-	Type: "Cube",
-	X: 550,
-	Y: 300
-},{
-	Type: "Cube",
-	X: 575,
-	Y: 300
-},{
-	Type: "OrbJump",
-	X: 675,
-	Y: 225
-},{
-	Type: "Cube",
-	X: 750,
-	Y: 150
-},{
-	Type: "Cube",
-	X: 775,
-	Y: 150
-},{
-	Type: "Cube",
-	X: 800,
-	Y: 150
-},{
-	Type: "Cube",
-	X: 825,
-	Y: 150
-},{
-	Type: "OrbJump",
-	X: 900,
-	Y: 150
-},{
-	Type: "OrbJump",
-	X: 1080,
-	Y: 150
-},{
-	Type: "Cube",
-	X: 1175,
-	Y: 150
-},{
-	Type: "Cube",
-	X: 1200,
-	Y: 150
-},{
-	Type: "Cube",
-	X: 1225,
-	Y: 150
-},{
-	Type: "Cube",
-	X: 1300,
-	Y: 150
-},{
-	Type: "Cube",
-	X: 1325,
-	Y: 150
-},{
-	Type: "Cube",
-	X: 425,
-	Y: 300
-},{
-	Type: "Cube",
-	X: 375,
-	Y: 325
-},{
-	Type: "Cube",
-	X: 350,
-	Y: 325
-},{
-	Type: "Cube",
-	X: 325,
-	Y: 325
-},{
-	Type: "Cube",
-	X: 300,
-	Y: 325
-},{
-	Type: "Cube",
-	X: 275,
-	Y: 325
-},{
-	Type: "Cube",
-	X: 250,
-	Y: 325
-},{
-	Type: "Cube",
-	X: 225,
-	Y: 325
-},{
-	Type: "Cube",
-	X: 200,
-	Y: 325
-},{
-	Type: "Cube",
-	X: 175,
-	Y: 325
-},{
-	Type: "Cube",
-	X: 200,
-	Y: 325
-},{
-	Type: "Cube",
-	X: 225,
-	Y: 325
-},{
-	Type: "Cube",
-	X: 250,
-	Y: 325
-},{
-	Type: "Cube",
-	X: 275,
-	Y: 325
-},{
-	Type: "Cube",
-	X: 300,
-	Y: 325
-},{
-	Type: "Cube",
-	X: 1375,
-	Y: 325
-},{
-	Type: "Cube",
-	X: 1400,
-	Y: 325
-},{
-	Type: "Cube",
-	X: 1425,
-	Y: 325
-},{
-	Type: "Cube",
-	X: 1450,
-	Y: 325
-},{
-	Type: "Cube",
-	X: 1475,
-	Y: 325
-},{
-	Type: "Cube",
-	X: 1500,
-	Y: 325
-},{
-	Type: "Cube",
-	X: 1525,
-	Y: 325
-},{
-	Type: "Cube",
-	X: 1550,
-	Y: 325
-},{
-	Type: "Cube",
-	X: 1575,
-	Y: 300
-},{
-	Type: "Cube",
-	X: 1600,
-	Y: 300
-},{
-	Type: "Cube",
-	X: 1625,
-	Y: 300
-},{
-	Type: "Jumper",
-	X: 1625,
-	Y: 275
-},{
-	Type: "Cube",
-	X: 1850,
-	Y: 300
-},{
-	Type: "Cube",
-	X: 1875,
-	Y: 300
-},{
-	Type: "Cube",
-	X: 1900,
-	Y: 300
-},{
-	Type: "PlanePortal",
-	X: 1900,
-	Y: 250
-},{
-	Type: "Cube",
-	X: 1925,
-	Y: 300
-},{
-	Type: "Cube",
-	X: 1950,
-	Y: 300
-},{
-	Type: "Cube",
-	X: 1975,
-	Y: 300
-},{
-	Type: "Cube",
-	X: 1975,
-	Y: 150
-},{
-	Type: "Cube",
-	X: 2000,
-	Y: 300
-},{
-	Type: "Cube",
-	X: 2000,
-	Y: 150
-},{
-	Type: "Cube",
-	X: 2025,
-	Y: 300
-},{
-	Type: "Cube",
-	X: 2025,
-	Y: 150
-},{
-	Type: "Cube",
-	X: 2050,
-	Y: 300
-},{
-	Type: "Cube",
-	X: 2050,
-	Y: 150
-},{
-	Type: "Cube",
-	X: 2075,
-	Y: 300
-},{
-	Type: "Cube",
-	X: 2075,
-	Y: 150
-},{
-	Type: "Cube",
-	X: 2100,
-	Y: 300
-},{
-	Type: "Cube",
-	X: 2100,
-	Y: 150
-},{
-	Type: "Cube",
-	X: 2125,
-	Y: 300
-},{
-	Type: "Cube",
-	X: 2125,
-	Y: 150
-},{
-	Type: "Cube",
-	X: 2150,
-	Y: 300
-},{
-	Type: "Cube",
-	X: 2150,
-	Y: 150
-}];
+var objects = [{"Type":"Cube","X":400,"Y":300},{"Type":"Cube","X":425,"Y":300},{"Type":"Cube","X":450,"Y":300},{"Type":"Cube","X":475,"Y":300},{"Type":"Spike","X":500,"Y":275},{"Type":"Cube","X":500,"Y":300},{"Type":"Cube","X":525,"Y":300},{"Type":"Cube","X":550,"Y":300},{"Type":"Cube","X":575,"Y":300},{"Type":"OrbJump","X":675,"Y":225},{"Type":"Cube","X":750,"Y":150},{"Type":"Cube","X":775,"Y":150},{"Type":"Cube","X":800,"Y":150},{"Type":"Cube","X":825,"Y":150},{"Type":"OrbJump","X":900,"Y":150},{"Type":"OrbJump","X":1080,"Y":150},{"Type":"Cube","X":1175,"Y":150},{"Type":"Cube","X":1200,"Y":150},{"Type":"Cube","X":1225,"Y":150},{"Type":"Cube","X":1300,"Y":150},{"Type":"Cube","X":1325,"Y":150},{"Type":"Cube","X":425,"Y":300},{"Type":"Cube","X":375,"Y":325},{"Type":"Cube","X":350,"Y":325},{"Type":"Cube","X":325,"Y":325},{"Type":"Cube","X":300,"Y":325},{"Type":"Cube","X":275,"Y":325},{"Type":"Cube","X":250,"Y":325},{"Type":"Cube","X":225,"Y":325},{"Type":"Cube","X":200,"Y":325},{"Type":"Cube","X":175,"Y":325},{"Type":"Cube","X":200,"Y":325},{"Type":"Cube","X":225,"Y":325},{"Type":"Cube","X":250,"Y":325},{"Type":"Cube","X":275,"Y":325},{"Type":"Cube","X":300,"Y":325},{"Type":"Cube","X":1375,"Y":325},{"Type":"Cube","X":1400,"Y":325},{"Type":"Cube","X":1425,"Y":325},{"Type":"Cube","X":1450,"Y":325},{"Type":"Cube","X":1475,"Y":325},{"Type":"Cube","X":1500,"Y":325},{"Type":"Cube","X":1525,"Y":325},{"Type":"Cube","X":1550,"Y":325},{"Type":"Cube","X":1575,"Y":300},{"Type":"Cube","X":1600,"Y":300},{"Type":"Cube","X":1625,"Y":300},{"Type":"Jumper","X":1625,"Y":275},{"Type":"Cube","X":1850,"Y":300},{"Type":"Cube","X":1875,"Y":300},{"Type":"Cube","X":1900,"Y":300},{"Type":"PlanePortal","X":1900,"Y":250},{"Type":"Cube","X":1925,"Y":300},{"Type":"Cube","X":1950,"Y":300},{"Type":"Cube","X":1975,"Y":300},{"Type":"Cube","X":1975,"Y":150},{"Type":"Cube","X":2000,"Y":300},{"Type":"Cube","X":2000,"Y":150},{"Type":"Cube","X":2025,"Y":300},{"Type":"Cube","X":2025,"Y":150},{"Type":"Cube","X":2050,"Y":300},{"Type":"Cube","X":2050,"Y":150},{"Type":"Cube","X":2075,"Y":300},{"Type":"Cube","X":2075,"Y":150},{"Type":"Cube","X":2100,"Y":300},{"Type":"Cube","X":2100,"Y":150},{"Type":"Cube","X":2125,"Y":300},{"Type":"Cube","X":2125,"Y":150},{"Type":"Cube","X":2150,"Y":300},{"Type":"Cube","X":2150,"Y":150},{"Type":"Cube","X":2170,"Y":300},{"Type":"Cube","X":2170,"Y":150},{"Type":"Cube","X":2190,"Y":150},{"Type":"Cube","X":2210,"Y":150},{"Type":"Cube","X":2230,"Y":150},{"Type":"Cube","X":2250,"Y":150},{"Type":"Cube","X":2270,"Y":150},{"Type":"Cube","X":2290,"Y":150},{"Type":"Cube","X":2310,"Y":150},{"Type":"Cube","X":2330,"Y":150},{"Type":"Cube","X":2350,"Y":150},{"Type":"Cube","X":2370,"Y":150},{"Type":"Cube","X":2390,"Y":150},{"Type":"Cube","X":2410,"Y":150},{"Type":"Cube","X":2430,"Y":150},{"Type":"Cube","X":2450,"Y":150},{"Type":"Cube","X":2470,"Y":150},{"Type":"Cube","X":2490,"Y":150},{"Type":"Cube","X":2510,"Y":150},{"Type":"Cube","X":2530,"Y":150},{"Type":"Cube","X":2570,"Y":300},{"Type":"Cube","X":2590,"Y":300},{"Type":"Cube","X":2610,"Y":300},{"Type":"Cube","X":2630,"Y":300},{"Type":"Cube","X":2650,"Y":300},{"Type":"Cube","X":2670,"Y":300},{"Type":"Cube","X":2550,"Y":170},{"Type":"Cube","X":2570,"Y":190},{"Type":"CubePortal","X":2580,"Y":260},{"Type":"Cube","X":2690,"Y":300},{"Type":"Cube","X":2710,"Y":300},{"Type":"Cube","X":2730,"Y":300},{"Type":"Jumper","X":2750,"Y":280},{"Type":"Cube","X":3030,"Y":300},{"Type":"Cube","X":3010,"Y":300},{"Type":"Cube","X":2990,"Y":300},{"Type":"Cube","X":2970,"Y":300},{"Type":"Cube","X":2950,"Y":300},{"Type":"Cube","X":2930,"Y":300},{"Type":"Cube","X":2910,"Y":300},{"Type":"Cube","X":2890,"Y":300},{"Type":"Spike","X":2790,"Y":380},{"Type":"Spike","X":2750,"Y":400},{"Type":"Spike","X":2860,"Y":390},{"Type":"Spike","X":2830,"Y":400},{"Type":"Spike","X":2890,"Y":380},{"Type":"Spike","X":2730,"Y":360},{"Type":"Spike","X":2210,"Y":390},{"Type":"Spike","X":2260,"Y":380},{"Type":"Spike","X":2240,"Y":380},{"Type":"Spike","X":2190,"Y":350},{"Type":"Spike","X":2370,"Y":370},{"Type":"Spike","X":2300,"Y":390},{"Type":"Spike","X":2320,"Y":400},{"Type":"Spike","X":2340,"Y":370},{"Type":"Spike","X":2310,"Y":360},{"Type":"Spike","X":2410,"Y":370},{"Type":"Spike","X":2420,"Y":380},{"Type":"Spike","X":2450,"Y":380},{"Type":"Spike","X":2490,"Y":360},{"Type":"Spike","X":2530,"Y":340},{"Type":"Spike","X":2560,"Y":340},{"Type":"Spike","X":2570,"Y":360},{"Type":"Spike","X":2490,"Y":400},{"Type":"Spike","X":2420,"Y":410},{"Type":"Spike","X":2350,"Y":420},{"Type":"Spike","X":2330,"Y":390},{"Type":"Cube","X":3050,"Y":300},{"Type":"OrbDown","X":3180,"Y":290},{"Type":"Cube","X":3470,"Y":310},{"Type":"Jumper","X":3470,"Y":290},{"Type":"OrbJump","X":3280,"Y":170},{"Type":"Spike","X":3100,"Y":350},{"Type":"OrbJump","X":3230,"Y":120},{"Type":"OrbJump","X":3180,"Y":60},{"Type":"OrbJump","X":3300,"Y":70},{"Type":"Jumper","X":3340,"Y":350}];
 
-document.getElementById("textmapjson").value = JSON.stringify({"music":"xtrullortria.mp3","obj":objects});
+document.getElementById("textmapjson").value = JSON.stringify({"music":"music.mp3","obj":objects});
 
 var isdown = false;
 var downcounter = 0;
@@ -330,6 +50,9 @@ function resetgame() {
 	charrotation = 0;
 	levellength = 0;
 	music.currentTime = 0;
+	bglightr = 0;
+	bglightg = 0;
+	bglightb = 0;
 
 	objects.forEach((i) => {
 		if (i.X > levellength) {
@@ -350,24 +73,37 @@ function playerdied() {
 var circlessize = 25
 var circlessizeinc = -1
 var dt = 0;
-var dtl = 0;
+var dta = 0;
+var framedelay = 1;
+var fi = 0;
+var bglightr = 0;
+var bglightg = 0;
+var bglightb = 0;
 function gameloop() {
 	if (isatmenu) {
 		lastUpdate = now;
 	}else {
 		var now = Date.now();
-		dt = (now / lastUpdate) ;
+		dt = (now - lastUpdate) ;
 		
-		
-		var dta = (normaltime / dt);
-		dtl = Math.floor(dta / normaltime);
-		if (dtl == 0) {
-			dtl = 1;
+		fi++;
+		if (fi < framedelay) {
+			lastUpdate = now; //or else only the fps will drop. we need to drop physics too.
+			requestAnimationFrame(gameloop);
+			return;
+		};
+		fi = 0;
+		bglightr--;
+		bglightg--;
+		bglightb--;
+		dta = Math.floor(dt / normaltime);
+		if (dta == 0) {
+			dta = 1;
 		}
 		//alert(dtl)
 		//dt = (dt % 1) + 1;
 		
-		for (let i = 0; i < dtl; i++) {
+		for (let i = 0; i < dta; i++) {
 			if (isdown) {
 				downcounter += 1;
 				if (playertype == "Plane") {
@@ -392,9 +128,9 @@ function gameloop() {
 			if (circlessize == 26) {
 				circlessizeinc = -1
 			}
-			if (playery > 5000) {
+			if (playery > 3000) {
 				resetgame();
-				i == dtl;
+				i = dta;
 			}
 			if (playerx > levellength - 100) {
 				playery += (-50 - playery) / 8;
@@ -420,14 +156,16 @@ function gameloop() {
 var falling = true;
 function renderandcol(a) {
 	falling = true;
+	var renderedobjects = 0;
 	if (a)
-	drawrectat(0,0,canvas.width,canvas.height,"Black",3,true);
+	drawrectat(0,0,canvas.width,canvas.height,"rgb(" + bglightr + "," + bglightg + "," + bglightb + ")",3,true);
 	objects.forEach((i) => {
 		if (i.Type == "Cube") {
 			if (i.X - camx < canvas.width && i.X - camx + 25 > 0) {
 				if (i.Y - camy < canvas.height && i.Y - camy + 25 > 0) {
 					if (a)drawrectat(i.X - camx,i.Y - camy,25,25,"Blue",3,true);
 					handlecol(i.X, i.Y, 25, 25,i.Type);
+					renderedobjects++;
 				}
 			}
 		}
@@ -436,6 +174,7 @@ function renderandcol(a) {
 				//if (i.Y - camy < canvas.height && i.Y - camy + i.H > 0) {
 					if (a)drawrectat(i.X - camx,i.Y - camy,i.W,i.H,"Blue",3,true);
 					handlecol(i.X, i.Y, i.W, i.H,i.Type);
+					renderedobjects++;
 				//}
 			//}
 		}
@@ -444,6 +183,7 @@ function renderandcol(a) {
 				if (i.Y - camy < canvas.height && i.Y - camy + 25 > 0) {
 					if (a)drawrectat(i.X - camx,(i.Y + 15) - camy,25,10,"Orange",3,true);
 					handlecol(i.X, i.Y + 15, 25, 10,i.Type);
+					renderedobjects++;
 				}
 			}
 		}
@@ -452,6 +192,7 @@ function renderandcol(a) {
 				if (i.Y - camy + 25 < canvas.height) {
 					if (a)drawtrigat(i.X - camx,i.Y - camy,25,25,"Red",3,true);
 					handlecol(i.X, i.Y, 25, 25,i.Type);
+					renderedobjects++;
 				}
 			}
 		}
@@ -460,6 +201,7 @@ function renderandcol(a) {
 				if (i.Y - camy + 25 < canvas.height) {
 					if (a)drawcircleat(i.X - camx,i.Y - camy,circlessize,"Gold",3,true);
 					handlecol(i.X, i.Y, 25, 25,i.Type);
+					renderedobjects++;
 				}
 			}
 		}
@@ -468,6 +210,7 @@ function renderandcol(a) {
 				if (i.Y - camy + 25 < canvas.height) {
 					if (a)drawcircleat(i.X - camx,i.Y - camy,circlessize,"DeepSkyBlue",3,true);
 					handlecol(i.X, i.Y, 25, 25,i.Type);
+					renderedobjects++;
 				}
 			}
 		}
@@ -476,6 +219,7 @@ function renderandcol(a) {
 				if (i.Y - camy + 25 < canvas.height) {
 					if (a)drawrectat(i.X - camx,(i.Y - 25) - camy,25,50,"Orange",3,true);
 					handlecol(i.X, i.Y, 25, 50,i.Type);
+					renderedobjects++;
 				}
 			}
 		}
@@ -484,6 +228,7 @@ function renderandcol(a) {
 				if (i.Y - camy + 25 < canvas.height) {
 					if (a)drawrectat(i.X - camx,(i.Y - 25) - camy,25,50,"DeepSkyBlue",3,true);
 					handlecol(i.X, i.Y, 25, 50,i.Type);
+					renderedobjects++;
 				}
 			}
 		}
@@ -492,7 +237,7 @@ function renderandcol(a) {
 	if (a) {
 		ctx.translate(playerx - camx + 12.5, playery - camy + 12.5);
 		ctx.rotate(Math.PI / 180 * charrotation);
-		drawrectat(-12.5,-12.5,25,25,"LightBlue",0,true);
+		drawrectat(-12.5,-12.5,25,25, playertype == "Cube" ? "LightBlue" : "gold",0,true);
 		ctx.rotate(Math.PI / 180 * -charrotation);
 		ctx.translate(-(playerx - camx + 12.5), -(playery - camy + 12.5));
 		ctx.fillStyle = "white";
@@ -500,7 +245,7 @@ function renderandcol(a) {
 		ctx.fillText(Math.floor((playerx / levellength) * 100) + "%",0,30);
 		ctx.fillStyle = "white";
 		ctx.font = "12px Sans Serif";
-		ctx.fillText("Frame Delay:" + dt + ", Loops:" + dtl,0,60);
+		ctx.fillText("Frame Delay:" + dt + ", Loops:" + dta + " (" + renderedobjects + ")" + (framedelay != 1 ? " CUSTOM FPS" : ""),0,60);
 	}
 	if (falling) {
 		velocityY += 0.7;
@@ -598,7 +343,9 @@ function handlecol(x,y,width,height,type) {
 					if (playerx <= xw) {
 						if (isdown && downcounter < 5) {
 							velocityY = -12 * gravitydirection;
-							falling = false
+							falling = false;
+							bglightr = 50;
+							bglightg = 50;
 						}
 					}
 				}
@@ -611,7 +358,8 @@ function handlecol(x,y,width,height,type) {
 					if (playerx <= xw) {
 						gravitydirection = 1;
 						velocityY = -15 * gravitydirection;
-						falling = false
+						falling = false;
+						drawcircleat(x,y,100,"yellow",2,false);
 					}
 				}
 			}
@@ -623,9 +371,11 @@ function handlecol(x,y,width,height,type) {
 				if (playerx >= x) {
 					if (playerx <= xw) {
 						if (isdown && downcounter < 5) {
-							gravitydirection = -1;
-							velocityY = -12 * gravitydirection;
+							gravitydirection -= 1;
+							//velocityY = 12 * gravitydirection;
 							falling = false
+							bglightb = 50;
+							bglightg = 50;
 						}
 					}
 				}
@@ -758,6 +508,12 @@ document.body.addEventListener("keydown",function(e) {
 		pressedkeys.push(e.key);
 		console.log(pressedkeys)
 	}
+	if (e.key == " ") {
+		isdown = true;
+	}
+	if (e.key == "e" && !editor) {
+		isdown = true;
+	}
 })
 
 document.body.addEventListener("keyup",function(e) {
@@ -765,7 +521,7 @@ document.body.addEventListener("keyup",function(e) {
 	if (e.key == "n") {
 		toolindex += 1;
 		if (toolindex > tools.length - 1) {
-			toolindex == tools.length -1;
+			toolindex = tools.length -1;
 		}
 	}
 	if (e.key == "m") {
@@ -779,7 +535,11 @@ document.body.addEventListener("keyup",function(e) {
 		toolindex = -1;
 	}
 	if (e.key == "s") {
-		prompt("Map:", JSON.stringify({"music":"xtrullortria.mp3","obj":objects}));
+		prompt("Map:", JSON.stringify({"music":"music.mp3","obj":objects}));
+	}
+	if (e.key == " ") {
+		isdown = false;
+		downcounter = 0;
 	}
 })
 
