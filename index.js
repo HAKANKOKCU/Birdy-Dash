@@ -79,6 +79,7 @@ var fi = 0;
 var bglightr = 0;
 var bglightg = 0;
 var bglightb = 0;
+var mp = 1;
 function gameloop() {
 	if (isatmenu) {
 		lastUpdate = now;
@@ -93,11 +94,15 @@ function gameloop() {
 			return;
 		};
 		fi = 0;
-		bglightr--;
-		bglightg--;
-		bglightb--;
+		bglightr -= mp;
+		bglightg -= mp;
+		bglightb -= mp;
 		dta = Math.floor(dt / normaltime);
-		if (dta == 0) {
+		mp = 1;
+		if (dt / normaltime < 1) {
+			mp = dt / normaltime;
+		}
+		if (dta == 0) { // loop amount
 			dta = 1;
 		}
 		//alert(dtl)
@@ -105,7 +110,7 @@ function gameloop() {
 		
 		for (let i = 0; i < dta; i++) {
 			if (isdown) {
-				downcounter += 1;
+				downcounter += 1 * mp;
 				if (playertype == "Plane") {
 					ct = downcounter / 2;
 					if (ct > 4) {
@@ -115,17 +120,18 @@ function gameloop() {
 				}
 			}
 			
-			playerx += (playerspeed * mapdirection) //* (dt / normaltime);
-			camx -= ((camx - (playerx - ((canvas.width / 1366) * 350))) / camspeed)// * (dt / normaltime);
-			camy -= ((camy - (playery - canvas.height + ((canvas.height / 635) * 350))) / camspeed) //* (dt / normaltime)
-			playery += ((gravitydirection * velocityY) * mapdirection) //* (dt / normaltime);
+			playerx += (playerspeed * mapdirection) * mp //* (dt / normaltime);
+			camx -= ((camx - (playerx - ((canvas.width / 1366) * 350))) / camspeed) * mp// * (dt / normaltime);
+			camy -= ((camy - (playery - canvas.height + ((canvas.height / 635) * 350))) / camspeed) * mp //* (dt / normaltime)
+			playery += ((gravitydirection * velocityY) * mapdirection) * mp //* (dt / normaltime);
 			renderandcol(i == 0);
 			
-			circlessize += circlessizeinc;
+			circlessize += circlessizeinc * mp;
+			if (circlessize < 5) {circlessize = 5}
 			if (circlessize == 5) {
 				circlessizeinc = 1
 			}
-			if (circlessize == 26) {
+			if (circlessize > 25) {
 				circlessizeinc = -1
 			}
 			if (gravitydirection == 1) {
@@ -252,15 +258,19 @@ function renderandcol(a) {
 		ctx.fillText(Math.floor((playerx / levellength) * 100) + "%",0,30);
 		ctx.fillStyle = "white";
 		ctx.font = "12px Sans Serif";
-		ctx.fillText("Frame Delay:" + dt + ", Loops:" + dta + ", Rendered:" + renderedobjects + (framedelay != 1 ? " CUSTOM FPS" : ""),0,60);
+		ctx.fillText("Frame Delay:" + dt + ", Loops:" + dta + ", Rendered:" + renderedobjects + (framedelay != 1 ? " CUSTOM FPS" : "") + " MP:" + mp,0,60);
 	}
 	if (falling) {
-		velocityY += 0.7;
+		if (playertype == "Cube") {
+			velocityY += 0.7 * mp;
+		}else {
+			velocityY += ((8 - velocityY) / 8) * mp;
+		}
 		if (velocityY > 32) {
 			velocityY = 32
 		}
 		if (playertype == "Cube") {
-			charrotation += 10;
+			charrotation += 10 * mp;
 		}
 	}else {
 		var charrotmod = charrotation % 90;
@@ -287,7 +297,7 @@ function handlecol(x,y,width,height,type) {
 						velocityY = 0;
 						playery = y - 25
 						falling = false;
-						if (isdown) {
+						if (isdown && playertype == "Cube") {
 							velocityY -= 10;
 						}
 					}
