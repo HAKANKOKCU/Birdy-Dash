@@ -314,7 +314,7 @@ function handlecol(x,y,width,height,type) {
 					}
 				}
 			}else {
-				if (playery <= yh) {
+				if (playery <= yh - 1) {
 					if (playerx >= x) {
 						if (playerx <= xw) {
 							playerdied();
@@ -499,8 +499,8 @@ document.getElementById("editmap").addEventListener("click",function() {
 		mpx = e.clientX;
 		mpy = e.clientY;
 		if (toolindex == -1) {
-			var x = Math.round((camx + mpx) / 10) * 10;
-			var y = Math.round((camy+ mpy) / 10) * 10;
+			var x = Math.round((camx + mpx) / 5) * 5;
+			var y = Math.round((camy + mpy) / 5) * 5;
 			objects.forEach(function(i,r) {
 				if (i.X == x && i.Y == y) {
 					delete objects[r];
@@ -509,8 +509,8 @@ document.getElementById("editmap").addEventListener("click",function() {
 		}else {
 			let i = {
 				Type: tools[toolindex],
-				X: Math.round((camx + mpx) / 10) * 10,
-				Y: Math.round((camy+ mpy) / 10) * 10
+				X: Math.round((camx + mpx) / 5) * 5,
+				Y: Math.round((camy + mpy) / 5) * 5
 			}
 			objects.push(i);
 		}
@@ -520,8 +520,8 @@ document.getElementById("editmap").addEventListener("click",function() {
 		mpy = e.clientY;
 		let i = {
 			Type: tools[toolindex],
-			X: Math.round((camx + mpx) / 10) * 10,
-			Y: Math.round((camy+ mpy) / 10) * 10
+			X: Math.round((camx + mpx) / 5) * 5,
+			Y: Math.round((camy + mpy) / 5) * 5
 		}
 		objects.push(i);
 	})
@@ -652,8 +652,8 @@ function editorloop() {
 	})
 	
 	if (toolindex == -1) {
-		var x = Math.round((camx + mpx) / 10) * 10;
-		var y = Math.round((camy+ mpy) / 10) * 10;
+		var x = Math.round((camx + mpx) / 5) * 5;
+		var y = Math.round((camy + mpy) / 5) * 5;
 		objects.forEach(function(i,r) {
 			if (i.X == x && i.Y == y) {
 				drawrectat(i.X - camx - 5,i.Y - camy - 5,35,35,"red",3,false);
@@ -664,8 +664,8 @@ function editorloop() {
 	{
 		let i = {
 			Type: (toolindex == -1) ? "r" : tools[toolindex],
-			X: Math.round((camx + mpx) / 10) * 10,
-			Y: Math.round((camy+ mpy) / 10) * 10
+			X: Math.round((camx + mpx) / 5) * 5,
+			Y: Math.round((camy + mpy) / 5) * 5
 		}
 		if (i.Type == "r") {
 			if (i.X - camx < canvas.width && i.X - camx + 25 > 0) {
